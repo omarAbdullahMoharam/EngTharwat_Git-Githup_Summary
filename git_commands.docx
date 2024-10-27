@@ -24,3 +24,8 @@ git checkout +name of the branch
 move(switch) to the specified branch
 git checkout -b + name of branch
 create a new branch and switch to it in one step 
+
+git switch + name of the branch 
+to switch from branch to another
+git switch -c +name of the branch
+creates a new branch and switch to it in one step
