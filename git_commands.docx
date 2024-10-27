@@ -29,3 +29,24 @@ git switch + name of the branch
 to switch from branch to another
 git switch -c +name of the branch
 creates a new branch and switch to it in one step
+
+git ls-files
+show the tracked files which moved before to the staging area
+
+git status 
+show the current state of the tracked and un tracked files
+
+ً 
+🚨🚨🚨Merging🚨🚨🚨
+قبل م تعمل ميرج لازم تروح للمكان الى عاوز تعمل ميرج فيه يعني لو عاوز تعمل ميرج لبرانش ف
+ الmain
+يبقا لازم تروح لل
+main 
+وتبدأ تكتب الامر بتاع الميرج هناك ف ال 
+main
+
+طب ايه الامر؟🔻
+
+source --> the changes in the branch we want to merge into the destination branch ( example : main is destination and XXX is the source branch ) 
+
+git merge + name of source branch(EXanple XXX) 
