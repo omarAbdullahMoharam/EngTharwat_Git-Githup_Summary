@@ -1,2 +1,17 @@
 git add + name of the file
 move the file to staging area
+
+git add  .
+move all the files to staging area 
+git commit -m "MSG"
+save changes
+git init
+initialize the repo
+git status
+know the current status of the files in the working directory
+git log
+show the log of the current repo or branch
+git checkout + commit ID 
+to move to the latest project changes until the specified commit 
+git checkout + branch name 
+show and move to(swithc to) the latest project changes in the branch 
