@@ -15,3 +15,12 @@ git checkout + commit ID
 to move to the latest project changes until the specified commit 
 git checkout + branch name 
 show and move to(swithc to) the latest project changes in the branch 
+
+git branch 
+show branches on the working directory 
+git branch + name of branch 
+create a branch
+git checkout +name of the branch 
+move(switch) to the specified branch
+git checkout -b + name of branch
+create a new branch and switch to it in one step 
