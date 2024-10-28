@@ -5,28 +5,37 @@ git add  .
 move all the files to staging area 
 git commit -m "MSG"
 save changes
+
 git init
 initialize the repo
+
 git status
 know the current status of the files in the working directory
+
 git log
 show the log of the current repo or branch
+
 git checkout + commit ID 
 to move to the latest project changes until the specified commit 
+
 git checkout + branch name 
 show and move to(swithc to) the latest project changes in the branch 
 
 git branch 
 show branches on the working directory 
+
 git branch + name of branch 
 create a branch
+
 git checkout +name of the branch 
 move(switch) to the specified branch
+
 git checkout -b + name of branch
 create a new branch and switch to it in one step 
 
 git switch + name of the branch 
 to switch from branch to another
+
 git switch -c +name of the branch
 creates a new branch and switch to it in one step
 
