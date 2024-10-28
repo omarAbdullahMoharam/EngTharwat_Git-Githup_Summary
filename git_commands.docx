@@ -49,4 +49,4 @@ main
 
 source --> the changes in the branch we want to merge into the destination branch ( example : main is destination and XXX is the source branch ) 
 
-git merge + name of source branch(EXanple XXX) 
+git merge + name of source branch(EXample XXX) 
