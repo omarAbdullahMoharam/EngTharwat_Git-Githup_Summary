@@ -59,3 +59,24 @@ main
 source --> the changes in the branch we want to merge into the destination branch ( example : main is destination and XXX is the source branch ) 
 
 git merge + name of source branch(EXample XXX) 
+
+
+if you want to remove un tracked files you can use two options :
+
+git clean -dn
+this will try to remove un tracked files or directories 
+
+-dn
+d--> abbreviation to directory 
+n--> abbreviation to dry run
+
+معناه يعني جرب تحذف ف اما تضغط انتر هيقولك ايه الفايلات الى ممكن يحذفها 
+
+git clean -df
+this will delete the un tracked files or directories 
+
+-df
+d--> abbreviation to directory 
+f--> abbreviation to force 
+معناه احذف بالفعل 
+
