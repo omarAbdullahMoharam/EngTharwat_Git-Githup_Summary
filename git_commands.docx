@@ -49,6 +49,19 @@ git checkout + branch name
 move to(swicth to) the latest project changes in the branch 
 
 -----------------🚨Branching🚨-----------------------
+انواع ال branches:
+local branch --> local workspace repo
+remote branch -->remote repo
+remote tracking branch --> copy of the remote branch (used while making merge )
+local tracking branch -->  local branches exists locally tracking remote branches BECAUSE we applied setup stream (-u) on it to track remote 
+
+برانش لوكال عادي بس عملتله سيتب استريم عشان يعمل تراك للريموت برانشززززز
+
+عشان كده مش بتحتاج تكتب 
+origin - name of the branch
+
+            ------------
+            
 git branch 
 show branches on the working directory 
 
@@ -69,6 +82,77 @@ creates a new branch and switch to it in one step
 
 __
 
+to show **(local only) **branches  :
+**git branch **
+
+to  show all branches created** (Local and Remote) **:
+**git branch -a**
+-a -->  for all
+
+to show the **Remote **branches only:
+
+**git branch -r**
+
+to publish a branch to the remote repo: 
+**git push origin + name of the branch **
+
+__
+
+
+to get the last updates from all the changes from the remote branches:
+**git fetch**
+OR
+**git fetch origin **
+
+**بيجيبلك كل المعلومات الجديده من الريموت**
+
+لو عملت اي تعديلات ع ال remote 
+وعاوز تجيبها فى ال local 
+ف انت بتستخدم الامر ده عشان يجيبلك كل التعديلات الى عملتها ف ال remote 
+ يخليها موجوده ف ال remote branches 
+الموجوده ف ال local 
+
+ولكن ده مش معناه انها هتكون موجوده ف ال local 
+بشكل رسمي علطول (في حاجه مسئوله عن كده هتقابلنا كمان شويه)
+
+وده عشان لو انت عملت تعديلات فى ال remote
+ ف التعديلات دي مش بتتغير بشكل اوتوماتيك 
+
+لازم تعملها fetch 
+عشان تسمع عندك ف ال local
+
+---------------- DELETE BRANCH --------------------------
+
+git branch -d +name of the branch 
+try to delete a specified branch 
+
+as an Alert🚨🚨
+this is the dry run of the command 
+this happens when you are trying to remove un merged changes
+
+but if you are strongly sured that you need to remove the branch 
+use the following command🔻: 
+
+git branch -D +name of the branch 
+Delete a specified branch now
+the difference is the D in Capital Case
+
+to delete a local branch :
+
+**git branch -D + name of the branch **
+
+to delete a branch from the remote repo :
+**git push origin --delete + name of the branch **
+
+1- delete it locally : **git branch -D + name of the branch **
+2- git push origin --delete + name of the branch
+
+بكتب origin 
+عشان انا عملت تعديل ف الريبو بالكامل مش تعديل ف برانش ف انا عاوز التعديل يكون علي مستوي الريبو كلها
+
+___
+
+🚨🚨🚨🚨🚨🚨🚨🚨🚨🚨🚨
 لو حذفت برانش وعاوز ارجعله بقا؟
 هحتاج ارجع ل اخر commit
  ف البرانش 
@@ -102,6 +186,53 @@ commit
 **git switch -c (name of the branch)**
 
 وبكده هبقا عملت برانش جديد نسخه طبق الاصل للبرانش الى حذفته وبكده كأني استرجعته
+
+🚨🚨🚨
+
+عشان اعمل
+ rename  ل برانش 
+**git branch -M + name of the branch**
+
+عشان اربط الريبو ال local 
+ب الريبو على githup 
+
+**git remote add origin + link of the repo **
+
+origin 
+دي انا كده بقوله ان لو لقيت الكلمه دي شيلها وحط اللينك بتاع الريبو
+
+عشان ارفع 
+**git push  -u origin main**
+
+-u 
+اختصار لكلمه up stream
+ودي الى بتخلي اللوكال برانش يعمل تراك على الريموت برانش
+ من غير م اضطر اكتب اسم البرانش او 
+ origin
+
+-------- REBASE -----------
+**Rebase**
+
+لو عاوز احرك برانش ع ال main 
+يبدأ من مكان اخر commit
+ ف ال
+main بعمل ايه؟
+
+اول حاجه روح للبرانش الى عاوز تعمله rebase 
+(تنقله)
+
+**git switch +name of branch (Example development )**
+
+بعد كده بتكتب الامر ده 
+**git rebase +(name of the source branch {example main} )**
+
+لو عاوز اجيب تعديلات صغيره بس من مكان واحطها ف ال برانش الى انا فيه 
+
+مثلا انا برانش ال main 
+**git switch main**
+** git cherry-pick + ID (of the needed commit )**
+
+
 
 ------------------------------------------
 
@@ -145,6 +276,22 @@ this will delete the un tracked files or directories
 d--> abbreviation to directory 
 f--> abbreviation to force 
 معناه احذف بالفعل 
+
+
+🚨🚨🚨
+انواع ال Merge 
+
+**fast-forward merge**
+**Non-fast-forward merge**
+
+**1- fast-forward merge **
+ده بيحصل لو انت عملت merge
+ لبرانش على ال main branch 
+و ال main 
+كان فاضى يعني مفيش فيه تعديلات من بعد م كريت البرانش الى انت بتعمله merge
+ على ال main
+
+
 -----------------------------
 TO DISCARD THE FILE CHANGES
 
@@ -213,22 +360,6 @@ so
 
 This means 🔻:
 the Entire changes for the specified commit will be brune (Deleted) 
-
----------------- DELETE BRANCH --------------------------
-
-git branch -d +name of the branch 
-try to delete a specified branch 
-
-as an Alert🚨🚨
-this is the dry run of the command 
-this happens when you are trying to remove un merged changes
-
-but if you are strongly sured that you need to remove the branch 
-use the following command🔻: 
-
-git branch -D +name of the branch 
-Delete a specified branch now
-the difference is the D in Capital Case
 
 -----------------STASHING-----------------------
 
@@ -340,4 +471,43 @@ when you run git stash pop:
 
 **git stash pop stash@{2}**
 This will apply and remove the stash with the identifier stash@{2} (the third stash in the list).
+
+------------ Up stream ---------------
+
+**git push  --set-upstream origin main**
+
+دي بتعمل اتشانل بينك وبين ال remote repo
+ وانت شغال ف ال local repo 
+
+في امر مختصر واسرع
+**git push -u origin main**
+
+عشان اربط الريبو ال local 
+ب الريبو على githup 
+
+**git remote add origin + link of the repo **
+
+origin 
+دي انا كده بقوله ان لو لقيت الكلمه دي شيلها وحط اللينك بتاع الريبو
+
+عشان ارفع 
+**git push  -u origin main**
+
+-u 
+اختصار لكلمه up stream
+ودي الى بتخلي اللوكال برانش يعمل تراك على الريموت برانش
+ من غير م اضطر اكتب اسم البرانش او 
+ origin
+
+-------------------------------------
+
+git pull
+this command is 2 in 1 (contains two commands implicitly ):
+
+2- git fetch
+catch all the new information from remote 
+
+1- git merge
+merge the new updates into the local workspace
+{if it's completely Ok it makes fast forward merge} 
 
