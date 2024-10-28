@@ -1,3 +1,4 @@
+------------ COMMITS & STAGING -----------
 git add + name of the file
 move the file to staging area
 
@@ -10,13 +11,35 @@ save changes
 git init
 initialize the repo
 
------------------------------------------------------------
+------------ LOG & STATUS -------------
 
 git status
 know the current status of the files in the working directory
 
 git log
 show the log of the current repo or branch
+
+🚨🚨🚨🚨🚨🚨🚨🚨🚨🚨🚨🚨
+
+عشان احذف commit
+  كنت بعمل حاجه من اتنين دول
+
+**git reset ( --hard || --soft ) head~(N)**
+n --> number of commits to be removed 
+
+طب لو انا حذفت commit
+ بالغلط او حذفتها واكتشفت اني محتاجها؟
+هرجعها ازاى!!
+** git reset + id of the commit **
+
+طب لو مش معايا ال id بتاع الcommit 
+هستخدم الامر ده عشان ارجع ب ال history بتاع الريبو كله
+
+**git reflog **
+
+هيديك ال id
+ بتاع ال commit ومن هنا تقدر ترجعها 
+**git reset --hard +( ID of the commit)**
 
 -------------------------------------
 git checkout + commit ID 
