@@ -86,4 +86,87 @@ d--> abbreviation to directory
 f--> abbreviation to force 
 معناه احذف بالفعل 
 -----------------------------
+TO DISCARD THE FILE CHANGES
+
+git restore + file name 
+to discard the changes on the specified file
+
+git restore  .
+to discard all the changes on all files
+
+git checkout + file name
+this will discard the updates un staged (un committed) on the file 
+
+BECAUSE
+     it will return to the latest commit state
+
+git rm + file name 
+delete the specified file
+then 🔻
+git commit 
+to save changes
+
+git restore --staged +file name
+to unstage file from the staged area (this makes the file unstaged)
+
+then discard changes
+
+git restore +file name
+to discard changes 
+
+git  reset +file name 
+to remove the file from the staging area (makes the file un staged)
+
+------------------------------------------
+
+git reset head~ + N
+
+this will remove N number of commits from the top of the commit's stack 
+
+N represents the number of the commits needed to be removed
+
+and it makes the last commit after reset(remove) not staged 
+
+
+this means 🔻:
+it makes two steps backward      ( working dir and staging area )
+
+git reset --soft  head~ + N
+this makes the same thing 
+
+but
+    it makes one step ( Step by Step) 
+
+so
+    it removes the file or the commit from the working dir 
+
+but
+    it still remains in the staging area
+
+git reset --hard  head~ + N
+his makes the same thing 
+
+but
+    it makes all the Delete steps 
+so
+    it removes the file or the commit from the working dir and staging area and  Discards the modified lines or files 
+
+This means 🔻:
+the Entire changes for the specified commit will be brune (Deleted) 
+
+---------------- DELETE BRANCH --------------------------
+
+git branch -d +name of the branch 
+try to delete a specified branch 
+
+as an Alert🚨🚨
+this is the dry run of the command 
+this happens when you are trying to remove un merged changes
+
+but if you are strongly sured that you need to remove the branch 
+use the following command🔻: 
+
+git branch -D +name of the branch 
+Delete a specified branch now
+the difference is the D in Capital Case 
 
