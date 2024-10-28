@@ -3,11 +3,14 @@ move the file to staging area
 
 git add  .
 move all the files to staging area 
+
 git commit -m "MSG"
 save changes
 
 git init
 initialize the repo
+
+-----------------------------------------------------------
 
 git status
 know the current status of the files in the working directory
@@ -15,12 +18,14 @@ know the current status of the files in the working directory
 git log
 show the log of the current repo or branch
 
+-------------------------------------
 git checkout + commit ID 
 to move to the latest project changes until the specified commit 
 
 git checkout + branch name 
-show and move to(swithc to) the latest project changes in the branch 
+move to(swicth to) the latest project changes in the branch 
 
+-----------------🚨Branching🚨-----------------------
 git branch 
 show branches on the working directory 
 
@@ -38,6 +43,7 @@ to switch from branch to another
 
 git switch -c +name of the branch
 creates a new branch and switch to it in one step
+------------------------------------------
 
 git ls-files
 show the tracked files which moved before to the staging area
@@ -45,7 +51,7 @@ show the tracked files which moved before to the staging area
 git status 
 show the current state of the tracked and un tracked files
 
-ً 
+---------------------------------------------------------
 🚨🚨🚨Merging🚨🚨🚨
 قبل م تعمل ميرج لازم تروح للمكان الى عاوز تعمل ميرج فيه يعني لو عاوز تعمل ميرج لبرانش ف
  الmain
@@ -60,7 +66,7 @@ source --> the changes in the branch we want to merge into the destination branc
 
 git merge + name of source branch(EXample XXX) 
 
-
+-------------------------------------------
 if you want to remove un tracked files you can use two options :
 
 git clean -dn
@@ -79,4 +85,5 @@ this will delete the un tracked files or directories
 d--> abbreviation to directory 
 f--> abbreviation to force 
 معناه احذف بالفعل 
+-----------------------------
 
