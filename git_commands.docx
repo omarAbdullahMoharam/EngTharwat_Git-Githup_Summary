@@ -504,10 +504,14 @@ origin
 git pull
 this command is 2 in 1 (contains two commands implicitly ):
 
-2- git fetch
+1- git fetch
 catch all the new information from remote 
 
-1- git merge
+2- git merge
 merge the new updates into the local workspace
-{if it's completely Ok it makes fast forward merge} 
+{ If it's completely Ok it makes fast forward merge } 
 
+---------------Githup---------------
+git clone + link of the repo
+
+to catch a repo from remote 
